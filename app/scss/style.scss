@@ -7,6 +7,27 @@
     align-items: center;
     height: 120px;
 }
+.header__content{
+    align-items: center;
+    justify-content: space-between;
+    width: inherit;
+    padding-left: 25px;
+    .header__content-search{
+        display: none;
+        border: none;
+        outline: none;
+        background: transparent;
+        margin-right: 25px;
+    }
+}
+.header__logo.hidden{
+    display: none;
+}
+.header__logo{
+    .logo-small{
+        display: none;
+    }
+}
 .header__search-form{
     max-width: 262px;
     width: 100%;
@@ -40,7 +61,9 @@
         }
     }
 }
-.header__phone{
+.header__phone,
+.footer__phone,
+.menu__phone-link{
     @include f600;
     font-size: 18px;
     line-height: 22px;
@@ -50,8 +73,8 @@
         color: #000;
     }
 }
+
 .header__social-links{
-    
     li{
         width: 30px;
         height: 30px;
@@ -130,6 +153,7 @@
         padding-left: 30px;
         padding-right: 40px;
         position: relative;
+        align-items: center;
         cursor: pointer;
         &:hover{
             text-decoration: none;
@@ -143,7 +167,7 @@
             width: 21px;
             height: 21px;
             left: 0;
-            top: -2px;
+            top: 0px;
         }
         span{
             position: absolute;
@@ -188,10 +212,37 @@
     height: 64px;
     background: rgba(2, 172, 143, 0.05);
     box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
+    align-items: center;
+    display: flex;
+    .menu__inner{
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+    .menu__buttons{
+        align-items: center;
+    }
+    .menu__phone-link{
+        display: none;
+        margin-right: 30px;
+    }
+    .menu__logo-btn{
+        display: none;
+        &__burger{
+            cursor: pointer;
+            display: none;
+            &.on{
+                display: block;
+            }
+        }
+
+    }
 }
 .menu__list{
     height: 64px;
     align-items: center;
+    display: flex;
+    z-index: 10;
     li{
         margin-right: 28px;
         &:last-child{
@@ -221,6 +272,11 @@
         padding-right: 10px;
         padding-left: 10px;
         outline: none;
+        transition: 0.9s;
+        &:hover{
+            background: rgba(2, 172, 143, 0.4);
+            transition: 0.9s;
+        }
     }
 }
 //slider
@@ -267,7 +323,13 @@
             height: 48px;
             max-width: 184px;
             width: 100%;
+            transition: 0.9s;
+            &:hover{
+                background: #FFA524;
+                transition: 0.9s;
+            }
         }
+
     }
 }
 //about-us
@@ -275,6 +337,7 @@
     padding-top: 75px;
     padding-bottom: 65px;
 }
+
 .about-us__title{
     font-size: 30px;
     line-height: 37px;
@@ -292,6 +355,7 @@
     }
     .green{
         color: $text2;
+        @include f700;
     }
 }
 .about-us__content-slider{
@@ -363,7 +427,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 79px;
-    .container{
+    .container-lg{
         position: relative;
         &::before{
             position: absolute;
@@ -382,7 +446,7 @@
             height: 85.5px;
             border-radius: 50% 50% 0 0 / 100% 100% 0 0;
             background-color: #4DF8AA;
-            bottom: -66px;
+            bottom: -68px;
             right: -85.5px;
         }
     }
@@ -393,6 +457,7 @@
         color: #fff;
     }
     &__col{
+        column-count: 3;
         p{
             @include f400;
             font-size: 14px;
@@ -400,6 +465,7 @@
             color: #fff;
             padding-left: 28px;
             position: relative;
+            margin-bottom: 20px;
             &::before{
                 position: absolute;
                 content: url(../images/icons/trash.svg);
@@ -414,75 +480,269 @@
 //work
 .work{
     padding-top: 80px;
+    padding-bottom: 60px;
     &__title{
         font-size: 30px;
         line-height: 37px;
-        @include f600;
         color: #000;
+        @include f600;
+        margin-bottom: 40px;
     }
-    &__item{
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        background: rgba(2, 172, 143, 0.2);
+    .work__content{
+        justify-content: space-around;
+        display: flex;
     }
-    .trash{
-        position: relative;
-        &::before{
-            position: absolute;
-            content: url(../images/icons/trash-basket.svg);
-            width: 53.98px;
-            height: 59.99px;
-            bottom: -10px;
-            right: -14px;
+    .link-work{
+        text-align: center;
+        padding-bottom: 50px;
+        width: 250px;
+        min-height: 235px;
+        margin-bottom: 15px;
+        &:hover{
+            .subtitle-link{
+                display: block;
+            }
+            .title-link{
+                color: $text2;
+            }
+        }
+        .item-link{
+            max-width: 100px;
+            width: 100%;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(2, 172, 143, 0.2);
+            margin: 0 auto;
+        }
+        .title-link{
+            font-size: 17px;
+            line-height: 21px;
+            @include f600;
+            color: #000;
+            margin-top: 15px;
+        }
+        .subtitle-link{
+            display: none;
+            font-size: 14px;
+            line-height: 17px;
+            color: rgba(0, 0, 0, 0.8);
+            @include f400;
+            transition: all 3s;
+            margin-top: 15px;
+            position: relative;
+            &::before{
+                position: absolute;
+                content: url(../images/icons/arrow.svg) ;
+                top: 60px;
+                left: 45%;
+            }
+        }
+        .trash{
+            position: relative;
+            &::before{
+                position: absolute;
+                content: url(../images/icons/trash-basket.svg);
+                width: 53.98px;
+                height: 59.99px;
+                bottom: -7px;
+                right: -20px;
+            }
+        }
+        .car{
+            position: relative;
+            &::before{
+                position: absolute;
+                content: url(../images/icons/car.svg);
+                width: 86.31px;
+                height: 60px;
+                bottom: -7px;
+                right: -20px;
+            }
+        }
+        .box{
+            position: relative;
+            &::before{
+                position: absolute;
+                content: url(../images/icons/box.svg);
+                width: 66.29px;
+                height: 69.99px;
+                bottom: -7px;
+                right: -20px;
+            }
+        }
+        .sort{
+            position: relative;
+            &::before{
+                position: absolute;
+                content: url(../images/icons/sort.svg);
+                width: 60.03px;
+                height: 60px;
+                bottom: -7px;
+                right: -20px;
+            }
+        }
+        .send{
+            position: relative;
+            &::before{
+                position: absolute;
+                content: url(../images/icons/send.svg);
+                width: 70px;
+                height: 70px;
+                bottom: -7px;
+                right: -20px;
+            }
         }
     }
-    .car{
-        position: relative;
-        &::before{
-            position: absolute;
-            content: url(../images/icons/car.svg);
-            width: 86.31px;
-            height: 60px;
-            bottom: -10px;
-            right: -14px;
+    
+}
+//footer
+.footer{
+    background: rgba(2, 172, 143, 0.2);
+    padding-top: 60px;
+}
+.footer__col{
+    li{
+        display: block;
+        margin-bottom: 15px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        a{
+            @include f500;
+            font-size: 15px;
+            line-height: 18px;
+            color: rgba(0, 0, 0, 0.6);
         }
     }
-    .box{
-        position: relative;
-        &::before{
-            position: absolute;
-            content: url(../images/icons/box.svg);
-            width: 66.29px;
-            height: 69.99px;
-            bottom: -10px;
-            right: -14px;
-        }
-    }
-    .sort{
-        position: relative;
-        &::before{
-            position: absolute;
-            content: url(../images/icons/sort.svg);
-            width: 60.03px;
-            height: 60px;
-            bottom: -10px;
-            right: -14px;
-        }
-    }
-    .send{
-        position: relative;
-        &::before{
-            position: absolute;
-            content: url(../images/icons/send.svg);
-            width: 70px;
-            height: 70px;
-            bottom: -10px;
-            right: -14px;
+    &-btn{
+        margin-top: 40px;
+        button{
+            border: none;
+            background-color: $text2;
+            color: #fff;
+            font-size: 15px;
+            line-height: 18px;
+            @include f600;
+            max-width: 175px;
+            width: 100%;
+            padding: 10px 20px;
+            border-radius: 3px;
+            transition: 0.9s;
+            &:hover{
+                background-color: $text;
+                transition: 0.9s;
+            }
         }
     }
 }
-// @import 'media'; 
+.footer__contacts{
+    justify-content: flex-end;
+}
+.footer__social-links{
+    padding-top: 40px;
+    li{
+        width: 40px;
+        height: 40px;
+        background-color: #02AC8F;
+        border-radius: 50%;
+        margin-right: 9px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    .link-instagram{
+        position: relative;
+        &::before{
+            position: absolute;
+            content: "";
+            background-image: url(../images/icons/inst_footer.svg);
+            color: #fff;
+            width: 21.33px;
+            height: 21.33px;
+            background-repeat: no-repeat;
+            top: -8px;
+            left: 9px;
+        }
+    }
+    .link-vk{
+        position: relative;
+        &::before{
+            position: absolute;
+            content: "";
+            background-image: url(../images/icons/Vk_footer.svg);
+            color: #fff;
+            width: 26.67px;
+            height: 26.67px;
+            background-repeat: no-repeat;
+            top: -11px;
+            left: 5px;
+        }
+    }
+    .link-watsupp{
+        position: relative;
+        &::before{
+            position: absolute;
+            content: "";
+            background-image: url(../images/icons/whatsapp_footer.svg);
+            color: #fff;
+            width: 21.33px;
+            height: 21.33px;
+            background-repeat: no-repeat;
+            top: -9px;
+            left: 9px;
+        }
+    }
+    .link-youtube{
+        position: relative;
+        &::before{
+            position: absolute;
+            content: "";
+            background-image: url(../images/icons/youtube_footer.svg);
+            color: #fff;
+            width: 24px;
+            height: 24px;
+            background-repeat: no-repeat;
+            top: -9px;
+            left: 8px;
+        }
+    }
+
+}
+.footer__address{
+    padding-top: 15px;
+    font-size: 15px;
+    line-height: 18px;
+    @include f500;
+    color: rgba(0, 0, 0, 0.6);
+}
+.footer__copy{
+    background-color: $text2;
+    margin-top: 60px;
+    min-height: 60px;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    &-site{
+        @include f600;
+        font-size: 15px;
+        line-height: 18px;
+        color: #fff;
+        cursor: pointer;
+        &:hover{
+            color: #fff;
+        }
+        span{
+            @include f500;
+        }
+    }
+    .right-block{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+
+@import 'media'; 
 
 
   

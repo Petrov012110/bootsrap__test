@@ -9,12 +9,10 @@ html{
 html,
 body {
     height: 100%;
-
 }
 a{
     display: inline-block;
     text-decoration: none;
-    color: $text;
     &:hover{
         text-decoration: none;
     }
@@ -25,13 +23,31 @@ li{
     padding: 0;
     list-style: none;
     display: inline-block;
-
 }
 body{
-    font-family: 'Roboto-Regular', sans-serif;
-    font-size: 15px;
-    color: $text;
-    line-height: 24px;
-    font-weight: 400;
     overflow-x: hidden;
+}
+.shadows {
+    position: relative;
+    &::before{
+        position: absolute;
+        content: '';
+        background-color: #000;
+        opacity: 0.50;
+        bottom: 0;
+        width: 100%;
+        z-index: 5;
+        height: 100%;
+    }
+  }
+
+.header__basket-link{
+    p{
+        margin-bottom: 0;
+    }
+}
+.header__login{
+    p{
+        margin-bottom: 0;
+    }
 }

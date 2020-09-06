@@ -5,205 +5,311 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
     <header class="header">
-        <div class="container">
+        <div class="container-lg">
             <div class="row">
                 <div class="header__top col-xl-12 d-flex">
                     <div class="header__logo">
                         <a href="#">
-                            <img src="images/icons/logo.svg" alt="">
+                            <img class="logo-big" src="images/icons/logo.svg" alt="">
+                            <img class="logo-small" src="images/icons/logo-small.svg" alt="">
                         </a>
                     </div>
-                    <div class="header__search-form">
-                        <form class="d-flex">
-                            <input type="text" placeholder="Поиск" required>
-                            <button type="submit">
-                                <img src="images/icons/search.svg" alt="">
-                            </button>
-                        </form>
+                        <div class="header__search-form">
+                            <form class="d-flex">
+                                <input type="text" placeholder="Поиск" required>
+                                <button class="header__search-btn" type="submit">
+                                    <img src="images/icons/search.svg" alt="">
+                                </button>
+                            </form>
+                        </div>
+                        <div class="header__content d-flex">
+                        <button class="header__content-search" type="submit">
+                            <img src="images/icons/search.svg" alt="">
+                        </button>
+                        <a class="header__phone" href="tel:83472222222"> 8 (347) 222 22 22</a>
+                        <div class="header__social-links">
+                            <ul>
+                                <li><a class="link-instagram" href="#"></a></li>
+                                <li><a class="link-vk" href="#"></a></li>
+                                <li><a class="link-watsupp" href="#"></a></li>
+                                <li><a class="link-youtube" href="#"></a></li>
+                            </ul>
+                        </div>
+                        <div class="header__basket">
+                            <a class="header__basket-link d-flex" href="#"> <p>Корзина</p>  <span>2</span> </a>
+                            <div class="header__basket-money">1,737 ₽</div>
+                        </div>
+                        <a class="header__login" href="#">
+                           <p>Войти</p> 
+                        </a>
                     </div>
-                    <a class="header__phone" href="tel:83472222222"> 8 (347) 222 22 22</a>
-                    <div class="header__social-links">
-                        <ul>
-                            <li><a class="link-instagram" href="#"></a></li>
-                            <li><a class="link-vk" href="#"></a></li>
-                            <li><a class="link-watsupp" href="#"></a></li>
-                            <li><a class="link-youtube" href="#"></a></li>
-                        </ul>
-                    </div>
-                    <div class="header__basket">
-                        <a class="header__basket-link" href="#">Корзина <span>2</span> </a>
-                        <div class="header__basket-money">1,737 ₽</div>
-                    </div>
-                    <a class="header__login" href="#">
-                        Войти
-                    </a>
+                    
                 </div>
             </div>
         </div>
     </header>
     <section class="menu">
-        <div class="container">
+        <div class="container-lg">
             <div class="row">
-                <div class="menu__list col-xl-10 d-flex">
-                    <ul>
-                        <li><a href="#">Сортировка</a></li>
-                        <li><a href="#">Интернет магазин</a></li>
-                        <li><a href="#">О нас</a></li>
-                        <li><a href="#">Стать частью проекта</a></li>
-                        <li><a href="#">Партнерство</a></li>
-                        <li><a href="#">Контакты</a></li>
-                        <li><a href="#">Поддержать нас</a></li>
-                    </ul>
-                </div>
-                <div class="menu__btn col-xl-2 d-flex">
-                    <button>Оформить заказ</button>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="slider">
-        <div class="row">
-            <div class="slider__box col-xl-12">
-                <div class="slider__item">
-                    <div class="container">
-                        <div class="slider__item-text">
-                            <div class="slider__item-title">
-                                Вывоз мусора в Уфе <br>
-                                <span>за 200 рублей</span>
-                            </div>
-                            <p>
-                                Повторной переработке поддается 60-70% 
-                                содержимого нашего мусорного ведра
-                            </p>
-                            <div class="slider__item-btn">
-                                <button>Оформить заказ</button>
-                            </div>
-                        </div>
+                <div class="menu__inner col-xl-12 col-md-12">
+                    <div class="menu__logo-btn ">
+                        <img class="menu__logo-btn__burger on" src="images/icons/menu.svg" alt="">
+                        <img class="menu__logo-btn__burger" src="images/icons/cross.svg" alt="">
                     </div>
-                </div>
-                <div class="slider__item">
-                    <div class="container">
-                        <div class="slider__item-text">
-                            <div class="slider__item-title">
-                                Вывоз мусора в Уфе <br>
-                                <span>за 200 рублей</span>
-                            </div>
-                            <p>
-                                Повторной переработке поддается 60-70% 
-                                содержимого нашего мусорного ведра
-                            </p>
-                            <div class="slider__item-btn">
-                                <button>Оформить заказ</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider__item">
-                    <div class="container">
-                        <div class="slider__item-text">
-                            <div class="slider__item-title">
-                                Вывоз мусора в Уфе <br>
-                                <span>за 200 рублей</span>
-                            </div>
-                            <p>
-                                Повторной переработке поддается 60-70% 
-                                содержимого нашего мусорного ведра
-                            </p>
-                            <div class="slider__item-btn">
-                                <button>Оформить заказ</button>
-                            </div>
+                    <nav class="menu__list ">
+                        <ul>
+                            <li><a href="#">Сортировка</a></li>
+                            <li><a href="#">Интернет магазин</a></li>
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Стать частью проекта</a></li>
+                            <li><a href="#">Партнерство</a></li>
+                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#">Поддержать нас</a></li>
+                        </ul>
+                    </nav>
+                    <div class="menu__buttons d-flex">
+                        <a class="menu__phone-link" href="tel:83472222222"> 8 (347) 222 22 22</a>
+                        <div class="menu__btn">
+                            <button>Оформить заказ</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="about-us">
-        <div class="container">
+    <div class="global-wrapper">
+        <section class="slider">
             <div class="row">
+                <div class="slider__box col-xl-12 col-md-12">
+                    <div class="slider__item">
+                        <div class="container-lg">
+                            <div class="slider__item-text">
+                                <div class="slider__item-title">
+                                    Вывоз мусора в Уфе <br>
+                                    <span>за 200 рублей</span>
+                                </div>
+                                <p>
+                                    Повторной переработке поддается 60-70%
+                                    содержимого нашего мусорного ведра
+                                </p>
+                                <div class="slider__item-btn">
+                                    <button>Оформить заказ</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="container-lg">
+                            <div class="slider__item-text">
+                                <div class="slider__item-title">
+                                    Вывоз мусора в Уфе <br>
+                                    <span>за 200 рублей</span>
+                                </div>
+                                <p>
+                                    Повторной переработке поддается 60-70%
+                                    содержимого нашего мусорного ведра
+                                </p>
+                                <div class="slider__item-btn">
+                                    <button>Оформить заказ</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="container-lg">
+                            <div class="slider__item-text">
+                                <div class="slider__item-title">
+                                    Вывоз мусора в Уфе <br>
+                                    <span>за 200 рублей</span>
+                                </div>
+                                <p>
+                                    Повторной переработке поддается 60-70%
+                                    содержимого нашего мусорного ведра
+                                </p>
+                                <div class="slider__item-btn">
+                                    <button>Оформить заказ</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about-us">
+            <div class="container-lg">
+                <div class="row">
                     <div class="about-us__title col-xl-12">О нас</div>
+                </div>
+                <div class="row">
+                    <div class="about-us__content-col col-xl-3 col-md-6 col-sm-12">
+                        <p class="text">
+                            Примерно 60-70% того, что вы ежедневно выбрасываете в мусорное ведро,
+                            можно сдать на переработку.
+                            Зачем это делать?
+                        </p>
+                        <p class="text green">
+                            Чтобы избавить планету от ковра мусора, который с каждым годом становится все больше.
+                        </p>
+                    </div>
+                    <div class="about-us__content-col col-xl-3 col-md-6 col-sm-12">
+                        <p class="text">
+                            Все что вам нужно: перестать выбрасывать вместе с остальным мусором пластик,
+                            бумагу, конмервы, аллюминиевые банки, полиэтиленовые мешки и связаться с нами.
+                            Мы приедем, заберем ваш мусор и отправим его на переработку.
+                        </p>
+                        <p class="text green">
+                            Единственное условие — мусор должен быть чистым и отсортированным.
+                        </p>
+                    </div>
+                    <div class="about-us__content-slider col-xl-6">
+                        <div class="content-slider__item"></div>
+                        <div class="content-slider__item"></div>
+                        <div class="content-slider__item"></div>
+                        <div class="content-slider__item"></div>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-                        <div class="about-us__content-col col-xl-3">
-                            <p class="text">
-                                Примерно 60-70% того, что вы ежедневно выбрасываете в мусорное ведро, 
-                                можно сдать на переработку. 
-                                Зачем это делать? 
-                            </p>
-                            <p class="text green">
-                                Чтобы избавить планету от ковра мусора, который с каждым годом становится все больше.
-                            </p>
-                        </div>
-                        <div class="about-us__content-col col-xl-3">
-                            <p class="text">
-                                Все что вам нужно: перестать выбрасывать вместе с остальным мусором пластик, 
-                                бумагу, конмервы, аллюминиевые банки, полиэтиленовые мешки и связаться с нами. 
-                                Мы приедем, заберем ваш мусор и отправим его на переработку. 
-                            </p>
-                            <p class="text green">
-                                Единственное условие — мусор должен быть чистым и отсортированным.
-                            </p>
-                        </div>
-                        <div class="about-us__content-slider col-xl-6">
-                                <div class="content-slider__item"></div>
-                                <div class="content-slider__item"></div>
-                                <div class="content-slider__item"></div>
-                                <div class="content-slider__item"></div>
+        </section>
+        <section class="memo">
+            <div class="container-lg">
+                <div class="row">
+                    <div class="memo__title col-xl-3 col-md-5 col-sm-12">
+                        Памятка для тех, кто хочет нам помочь
+                    </div>
+                    <div class="memo__col col-xl-9">
+                        <p>Мусор на переработку <span>принимается в чистом виде</span> (мойте)</p>
+                        <p>Внимательно смотрите маркировку на упаковке. Если нет маркировки — <span>не сдавать.</span>
+                        </p>
+                        <p><span>Не принимается</span> всё, что написано через дефис. Например: C/LDPE, C/PP</p>
+                        <p>Все, что можно смять, <span>смело мните</span></p>
+                        <p><span>Сортируйте</span> по инструкции, по видам</p>
+                        <p><span>Не кладите</span> предметы друг в друга. Например: мешки в бутылку</p>
+                        <p>7 вид пластика (только твердый) <span>кладите отдельно</span> (всчтречается редко)</p>
+                        <p>Батарейки и аккумуляторы <span>принимаем</span></p>
+                        <p>Так же <span>отдельно</span> можете сдать провода, кабели, шнуры</p>
+                        <p>Твердым пластиком считаеся всё, что <span>твёрже пакета</span></p>
+                        <p>Картоном считается всё, что <span>плотнее</span> листа А4</p>
+                        <p><span>Мы забираем мусор</span> из вашей квартиры. Наш выезд стоит — <span>100 рублей</span> в
+                            черте города.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="work">
+            <div class="container-lg">
+                <div class="row">
+                    <div class="work__title col-xl-3 col-md-6">Как мы обрабатываем?</div>
+                </div>
+                <div class="row">
+                    <div class="work__content col-xl-12 col-md-12 col-sm-12">
+                        <a href="" class="link-work">
+                            <div class="item-link trash"></div>
+                            <div class="link-work__content">
+                                <div class="title-link">Собираем</div>
+                                <div class="subtitle-link">Распределяем весь собранный вами мусор по группам</div>
+                            </div>
+                        </a>
+                        <a href="" class="link-work">
+                            <div class="item-link car"></div>
+                            <div class="link-work__content">
+                                <div class="title-link">Забираем</div>
+                                <div class="subtitle-link">Увозим ваш мусор в сортировочный цех</div>
+                            </div>
+                        </a>
+                        <a href="" class="link-work">
+                            <div class="item-link box"></div>
+                            <div class="link-work__content">
+                                <div class="title-link">Храним</div>
+                                <div class="subtitle-link">До сортировки весь мусор хранится на нашем складе</div>
+                            </div>
+                        </a>
+                        <a href="" class="link-work">
+                            <div class="item-link sort"></div>
+                            <div class="link-work__content">
+                                <div class="title-link">Сортируем</div>
+                                <div class="subtitle-link">Финальный этап подготовки к переработке</div>
+                            </div>
+                        </a>
+                        <a href="" class="link-work">
+                            <div class="item-link send"></div>
+                            <div class="link-work__content">
+                                <div class="title-link">Отправляем</div>
+                                <div class="subtitle-link">Все собранные вещи отправляются на переработку</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container-lg">
+                <div class="row">
+                    <div class="footer__col col-xl-3 col-md-4">
+                        <ul class="footer__col-list">
+                            <li><a href="#">Главная</a></li>
+                            <li><a href="#">Сортировка</a></li>
+                            <li><a href="#">Интернет магазин</a></li>
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Стать частью проекта</a></li>
+                            <li><a href="#">Партнерство</a></li>
+                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#">Поддержать нас</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col col-xl-3 col-md-4">
+                        <ul class="footer__col-list">
+                            <li><a href="#">Способы оплаты</a></li>
+                            <li><a href="#">Доставка</a></li>
+                            <li><a href="#">Возврат товара</a></li>
+                            <li><a href="#">Политика конфиденциальности</a></li>
+                        </ul>
+                        <div class="footer__col-btn">
+                            <button>Оформить заказ</button>
                         </div>
                     </div>
-            </div>
-        </div>
-    </section>
-    <section class="memo">
-        <div class="container">
-            <div class="row">
-                <div class="memo__title col-xl-3">
-                    Памятка для тех, кто хочет нам помочь
-                </div>
-                <div class="memo__col col-xl-3">
-                    <p>Мусор на переработку <span>принимается в чистом виде</span> (мойте)</p>
-                    <p>Внимательно смотрите маркировку на упаковке. Если нет маркировки — <span>не сдавать.</span></p>
-                    <p><span>Не принимается</span> всё, что написано через дефис. Например: C/LDPE, C/PP</p>
-                    <p>Все, что можно смять, <span>смело мните</span></p>
-                </div>
-                <div class="memo__col col-xl-3">
-                    <p><span>Сортируйте</span> по инструкции, по видам</p>
-                    <p><span>Не кладите</span> предметы друг в друга. Например: мешки в бутылку</p>
-                    <p>7 вид пластика (только твердый) <span>кладите отдельно</span> (всчтречается редко)</p>
-                    <p>Батарейки и аккумуляторы <span>принимаем</span></p>
-                </div>
-                <div class="memo__col col-xl-3">
-                    <p>Так же <span>отдельно</span> можете сдать провода, кабели, шнуры</p>
-                    <p>Твердым пластиком считаеся всё, что <span>твёрже пакета</span></p>
-                    <p>Картоном считается всё, что <span>плотнее</span> листа А4</p>
-                    <p><span>Мы забираем мусор</span> из вашей квартиры. Наш выезд стоит — <span>100 рублей</span> в черте города.</p>
+                    <div class="footer__contacts col-xl-6 col-md-4 d-flex">
+                        <div class="footer__contacts-wrapp">
+                            <a class="footer__phone" href="tel:83472222222"> 8 (347) 222 22 22</a>
+                            <div class="footer__address">г. Уфа, ул. Пробная, д 132</div>
+                            <div class="footer__social-links">
+                                <ul>
+                                    <li><a class="link-instagram" href="#"></a></li>
+                                    <li><a class="link-vk" href="#"></a></li>
+                                    <li><a class="link-watsupp" href="#"></a></li>
+                                    <li><a class="link-youtube" href="#"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="work">
-        <div class="container">
-            <div class="row">
-                <div class="work__title col-xl-12">Как мы <br> обрабатываем?</div>
-            </div>
-            <div class="row">
-                <div class="work__content col-xl-12 d-flex">
-                    <div class="work__item trash"></div>
-                    <div class="work__item car"></div>
-                    <div class="work__item box"></div>
-                    <div class="work__item sort"></div>
-                    <div class="work__item send"></div>
+            <div class="footer__copy">
+                <div class="container-lg">
+                    <div class="row">
+                        <div class="footer__copy-link col-xl-6 col-md-6 col-sm-6 col-12">
+                            <a class="footer__copy-site">
+                                2020 site.ru
+                            </a>
+                        </div>
+                        <div class="footer__copy-link right-block col-xl-6 col-md-6 col-sm-6 col-12">
+                            <a class="footer__copy-site ">
+                                <span>Создание сайта —</span> Red Promo
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </footer>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>
