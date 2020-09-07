@@ -1022,6 +1022,17 @@ body {
           align-items: center;
 }
 
+@media (min-width: 1200px) {
+  .menu .menu__list {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+}
+
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .header .header__phone,
   .header .header__social-links {

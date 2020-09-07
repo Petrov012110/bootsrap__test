@@ -1,3 +1,11 @@
+@media (min-width: 1200px) { 
+    .menu{
+        .menu__list{
+            align-items: center;
+            display: flex !important;
+        }
+    }
+ }
 @media (min-width: 992px) and (max-width: 1199.98px) { 
     .header{
         .header__phone,
